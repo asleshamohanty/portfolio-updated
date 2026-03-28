@@ -55,7 +55,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
 .tbtn{position:fixed;top:24px;right:28px;z-index:300;width:34px;height:34px;border-radius:50%;border:.5px solid var(--border);background:var(--surface);backdrop-filter:blur(12px);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--muted);transition:all .2s}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;padding:100px 0 80px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:20px 0 80px}
 .eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;font-weight:400;display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';display:inline-block;width:28px;height:.5px;background:var(--accent)}
 .n1,.n2{font-family:'Inter',sans-serif;font-size:clamp(44px,7vw,78px);font-weight:800;line-height:1.0;letter-spacing:-3px;color:var(--text);display:block}
@@ -288,6 +288,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
     <p class="hs2">Focused on translating ambiguous problems into real engineering outcomes — across backend systems, AI/ML, and data.</p>
     <div class="ctas">
       <button class="bg2" onclick="goTo('projects')">See Work</button>
+      <button class="bg2" onclick="window.open('Aslesha-Resume.pdf','_blank')">View Resume</button>
       <div class="il" onclick="window.open(GITHUB_URL,'_blank')"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
       <div class="il" onclick="window.open(LINKEDIN_URL,'_blank')"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
     </div>
@@ -471,6 +472,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
     <div class="dsep"></div>
     <div class="di" onclick="window.open(GITHUB_URL,'_blank')"><div class="dic"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div><div class="dlbl">GitHub</div><div class="ddot"></div></div>
     <div class="di" onclick="window.open(LINKEDIN_URL,'_blank')"><div class="dic"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div><div class="dlbl">LinkedIn</div><div class="ddot"></div></div>
+    <div class="di" onclick="window.open('Aslesha-Resume.pdf','_blank')"><div class="dic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="13" x2="8" y2="13"/><line x1="12" y1="17" x2="8" y2="17"/></svg></div><div class="dlbl">Resume</div><div class="ddot"></div></div>
     <div class="dsep"></div>
     <div class="di" onclick="toggleTheme()"><div class="dic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div><div class="dlbl">Theme</div><div class="ddot"></div></div>
   </div>
