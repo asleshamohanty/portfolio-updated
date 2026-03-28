@@ -264,6 +264,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
   </div>
 </div>
 
+<!-- COMPLETION LETTER MODAL -->
+<div class="ov" id="lm" onclick="handleLetterModal(event)">
+  <div class="bp2" id="lpanel" style="max-width:600px;">
+    <div class="bh">
+      <button class="bback" onclick="closeLetterModal()"><svg viewBox="0 0 12 12"><polyline points="8,2 4,6 8,10"/></svg>Back</button>
+      <div class="btit" id="ltit" style="margin-bottom:12px;">Internship Completion Letter</div>
+    </div>
+    <img id="letter-image" src="" alt="Internship Completion Letter" style="width:100%;height:auto;display:block;border-radius:0 0 20px 20px;">
+  </div>
+</div>
+
 <div class="app">
 
 <!-- HERO -->
@@ -319,7 +330,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
             <li>Worked on containerized deployment and developer workflows with <strong>Docker</strong>, improving consistency across development and testing environments.</li>
             <li>Developed a <strong>feature detection algorithm in FreeCAD</strong> to automate CAD model analysis, improving design validation accuracy and reducing manual inspection effort.</li>
           </ul>
-          <a class="elink" id="karkhana-letter-link" href="karkhana.jpg" target="_blank" rel="noopener noreferrer">View internship completion letter ↗</a>
+          <button class="elink" id="karkhana-letter-link" onclick="openLetterModal()" style="background:none;border:none;padding:0;cursor:pointer;font-family:inherit;">View internship completion letter ↗</button>
           <div class="etl"><strong>TL;DR:</strong> Shipped production backend features and an automated CAD analysis tool, reducing manual engineering overhead.</div>
         </div>
         <div class="edt">Jun 2025 – Sep 2025</div>
@@ -420,9 +431,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
     <p class="sl">The Person</p>
     <h2 class="st">About Me</h2>
     <div class="abg">
-      <div class="aba" aria-label="Aslesha Mohanty portrait"><img id="about-image" src="aslesha.jpg" alt="Aslesha Mohanty portrait"></div>
+      <div class="aba" aria-label="Aslesha Mohanty portrait"><img id="about-image" src="aslesha.png" alt="Aslesha Mohanty portrait"></div>
       <div class="abt">
-        <p>Hi! I'm Aslesha, a CSE undergrad at MIT Manipal, building systems at the intersection of data engineering, machine learning, and backend. I love problem solving and I'm constantly asking "why" — breaking things down, understanding how things work, and building something better. I like finding patterns in everything, whether it's data, people, or everyday life.</p>
+        <p>Hi! I'm Aslesha, a CSE undergrad at Manipal Institue of Technology, building systems at the intersection of data engineering, machine learning, and backend. I love problem solving and I'm constantly asking "why" — breaking things down, understanding how things work, and building something better. I like finding patterns in everything, whether it's data, people, or everyday life.</p>
         <p>Outside of academics, I play for the women's football team, and I'm usually either traveling, trying new food, or exploring fashion. I'm a bit of an avid planner — I enjoy organizing everything from work to trips and day-to-day plans while still appreciating spontaneity and adapting quickly when things change.</p>
         <p>I work well under pressure, enjoy fast-paced environments, and like turning ideas into something real, quickly. I also enjoy long conversations over coffee, often diving into interesting (and sometimes completely random) topics just to think through different perspectives.</p>
       </div>
@@ -454,7 +465,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
     <div class="di active" data-t="hero"><div class="dic"><svg viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div><div class="dlbl">Home</div><div class="ddot"></div></div>
     <div class="di" data-t="experience"><div class="dic"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><div class="dlbl">Experience</div><div class="ddot"></div></div>
     <div class="di" data-t="projects"><div class="dic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div><div class="dlbl">Projects</div><div class="ddot"></div></div>
-    <div class="di" data-t="achievements"><div class="dic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="dlbl">Awards</div><div class="ddot"></div></div>
+    <div class="di" data-t="achievements"><div class="dic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="dlbl">Achievements</div><div class="ddot"></div></div>
     <div class="di" data-t="publications"><div class="dic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="dlbl">Research</div><div class="ddot"></div></div>
     <div class="di" data-t="about"><div class="dic"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="dlbl">About</div><div class="ddot"></div></div>
     <div class="dsep"></div>
@@ -469,17 +480,18 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14
 const GITHUB_URL='https://github.com/asleshamohanty/';
 const LINKEDIN_URL='https://www.linkedin.com/in/aslesha-mohanty-7b8447223/';
 const ASSET_URLS=window.PORTFOLIO_ASSET_URLS||{};
-const ABOUT_IMAGE_URL=ASSET_URLS.about||'aslesha.jpg';
+const ABOUT_IMAGE_URL=ASSET_URLS.about||'aslesha.png';
 const KARKHANA_LOGO_URL=ASSET_URLS.karkhanaLogo||'karkhana.jpg';
 const KARKHANA_LETTER_URL=ASSET_URLS.karkhanaLetter||'karkhana.jpg';
+const KARKHANA_LETTER_IMAGE_URL=ASSET_URLS.karkhanaLetterImage||'internship-completion-letter.png';
 
 function applyAssetUrls(){
   const aboutImage=document.getElementById('about-image');
   const karkhanaLogo=document.getElementById('karkhana-logo');
-  const karkhanaLetterLink=document.getElementById('karkhana-letter-link');
+  const letterImage=document.getElementById('letter-image');
   if(aboutImage)aboutImage.src=ABOUT_IMAGE_URL;
   if(karkhanaLogo)karkhanaLogo.src=KARKHANA_LOGO_URL;
-  if(karkhanaLetterLink)karkhanaLetterLink.href=KARKHANA_LETTER_URL;
+  if(letterImage)letterImage.src=KARKHANA_LETTER_IMAGE_URL;
 }
 applyAssetUrls();
 
@@ -521,7 +533,10 @@ function pop(cat,tit,meta,tags,bg,svg,body,gh,showGH){
 }
 function closeB(){document.getElementById('ov').classList.remove('open');document.body.style.overflow=''}
 function handleOv(e){if(e.target===document.getElementById('ov'))closeB()}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeB()});
+function openLetterModal(){const m=document.getElementById('lm');m.classList.add('open');document.body.style.overflow='hidden';m.scrollTop=0}
+function closeLetterModal(){document.getElementById('lm').classList.remove('open');document.body.style.overflow=''}
+function handleLetterModal(e){if(e.target===document.getElementById('lm'))closeLetterModal()}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeB();closeLetterModal()}});
 function toggleTheme(){document.body.classList.toggle('dark');document.getElementById('tb').textContent=document.body.classList.contains('dark')?'☽':'☀'}
 function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
 
